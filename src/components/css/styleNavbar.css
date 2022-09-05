@@ -1,0 +1,12 @@
+.logo{
+    width: 25%;
+    height: 25%;
+  }
+  .navbar{
+    width: 100%;
+  }
+  .nav-link{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+  }
