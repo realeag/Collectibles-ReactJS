@@ -1,10 +1,10 @@
 import './App.css';
-import './components/css/styleCuerpo.css';
-import './components/css/styleFooter.css';
-import './components/css/styleNavbar.css';
-import Navbar from './components/Navbar';
-import Cuerpo from './components/Cuerpo';
-import Footer from './components/Footer';
+import './components/Cuerpo/styleCuerpo.css';
+import './components/Footer/styleFooter.css';
+import './components/Navbar/styleNavbar.css';
+import Navbar from './components/Navbar/Navbar';
+import Cuerpo from './components/Cuerpo/Cuerpo';
+import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 

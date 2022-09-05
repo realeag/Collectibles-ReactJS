@@ -1,6 +1,6 @@
 import React from 'react';
-import favicon from "./imgs/vector.png";
-import CartWidget from './CartWidget';
+import favicon from "../imgs/vector.png";
+import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
 

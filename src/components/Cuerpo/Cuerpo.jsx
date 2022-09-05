@@ -1,6 +1,6 @@
 import React from 'react';
-import camiseta from './imgs/argentina86.jpg';
-import camiseta2 from './imgs/argentinaSup86.jpg';
+import camiseta from '../imgs/argentina86.jpg';
+import camiseta2 from '../imgs/argentinaSup86.jpg';
 
 const Newsletter = () => <p>Suscribite a nuestro Newsletter</p>
 
