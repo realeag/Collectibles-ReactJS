@@ -10,5 +10,11 @@
     {"id": 5, "nombre": "Figurita Zinedine Zidane 98", "descripcion": "Cromo de Zidane Mundial Francia '98",
         "precio": 7199.99, "stock": 10, "imagen":"../imgs/assets/zidane98.jpg"},
     {"id": 6, "nombre": "Figurita Roberto Carlos 98", "descripcion": "Cromo de Roberto Carlos Mundial Francia '98",
-        "precio": 6499.99, "stock": 10, "imagen":"../imgs/assets/robertocarlos98.jpg"}
+        "precio": 6499.99, "stock": 10, "imagen":"../imgs/assets/robertocarlos98.jpg"},
+    {"id": 7, "nombre": "Figurita Zanetti 02", "descripcion": "Cromo de Javier Zanetti Mundial Corea Japon '02",
+        "precio": 2799.99, "stock": 10, "imagen":"../imgs/assets/zanetti02.jpg"},
+    {"id": 8, "nombre": "Figurita Van Basten 90", "descripcion": "Cromo de Marco Van Basten Mundial Italia '90",
+        "precio": 6499.99, "stock": 10, "imagen":"../imgs/assets/vanbasten90.jpg"},
+    {"id": 9, "nombre": "Figurita Roberto Carlos 98", "descripcion": "Cromo de Diego Armando Maradona Mundial España '82",
+        "precio": 16999.99, "stock": 10, "imagen":"../imgs/assets/diego82.jpg"}
 ]
