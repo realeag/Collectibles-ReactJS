@@ -5,8 +5,7 @@ import './components/Navbar/styleNavbar.css';
 import Navbar from './components/Navbar/Navbar';
 import Cuerpo from './components/Cuerpo/Cuerpo';
 import Footer from './components/Footer/Footer';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
 
@@ -15,7 +14,6 @@ function App() {
       <Navbar />
       <hr />
       <main>
-        <ItemCount nombre="Intel Celeron" stock={10} initial={1} onAdd={0} />
         <ItemListContainer proyecto="ACA VA EL TITULO DEL PROYECTO" />
         <Cuerpo />
       </main>
