@@ -28,14 +28,14 @@ const ItemCount = ({ nombre, stock, initial, onAdd }) => {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-md-6'>
+                <div className='col-md-12'>
                     <h3 className='pb-2 text center'>{nombre}</h3>
-                    <div className="btn-group col-md-4 pb-2" role="group" aria-label="Basic outlined example">
+                    <div className="btn-group col-md-3 pb-2 h-50" role="group" aria-label="Basic outlined example">
                         <input type="button" className="btn btn-dark" value="-" onClick={() => { restarQuant(quant - 1) }}/>
-                        <input type="text" className="form-control" value={quant} aria-label="Input group example" aria-describedby="btnGroupAddon"></input>
+                        <input type="text" className="form-control text-center" value={quant} aria-label="Input group example" aria-describedby="btnGroupAddon" readOnly />
                         <input type='button' className="btn btn-dark" value="+" onClick={() => { sumarQuant(quant + 1) }}/>
+                        <button type="button" className="btn btn-secondary m-1 " onClick={() => { masProductos() }}>AÑADIR</button>
                     </div>
-                    <button type="button" className="btn btn-secondary d-grid col-md-4" onClick={() => { masProductos() }}>AÑADIR AL CARRITO</button>
                 </div>
                 <p>Seleccionaste: {agregar}</p>
             </div>

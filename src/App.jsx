@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <hr />
       <main>
-        <ItemListContainer proyecto="ACA VA EL TITULO DEL PROYECTO" />
+        <ItemListContainer proyecto="Collectibles SRL" description="¿Nostalgia? Te traemos todos los coleccionables de tu niñez" />
         <Cuerpo />
       </main>
       <Footer ubicacion='CABA' copyright='Nombre™' />
