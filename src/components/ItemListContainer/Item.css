@@ -1,3 +1,9 @@
-.tarjeta{
-    width: 18rem;
+.imagen{
+    width: 20%;
+    height: 20%;
+    align-self: center;
+};
+
+.card{
+    width: 50%;
 }
