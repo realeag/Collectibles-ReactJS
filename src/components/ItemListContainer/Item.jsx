@@ -5,7 +5,7 @@ const Item = ({ figuritas }) => {
         < div className="card tarjeta" >
             <img src={figuritas.imagen} className="card-img-top" alt={figuritas.descripcion}/>
                 <div className="card-body">
-                    <h5 className="card-title">{figuritas.imagen}</h5>
+                    <h5 className="card-title">{figuritas.nombre}</h5>
                     <p className="card-text">$ {figuritas.precio}</p>
                     <a className="btn btn-primary">AÑADIR</a>
                 </div>
@@ -13,4 +13,4 @@ const Item = ({ figuritas }) => {
     );
 }
 
-export default Item
+export default Item;

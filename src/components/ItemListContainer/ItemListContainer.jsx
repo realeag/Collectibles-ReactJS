@@ -19,10 +19,8 @@ const productos = [
         precio: 6499.99, stock: 10, imagen:"../../assets/imgs/robertocarlos98.jpg"}
     ];
 
-
 const ItemListContainer = (props) => {
         const [datos, setDatos] = useState([]); 
-
         useEffect(() => {
             const getData = new Promise(resolve => {
                 setTimeout(() => {
@@ -30,10 +28,8 @@ const ItemListContainer = (props) => {
                 }, 2000);
             });
             getData.then(res => setDatos(res));
-
         }, [])
-    
-        return (
+            return (
             <div className='text-center font-monospace m-3 itemlistcontainer'>
             <h2 className='text-decoration-underline'>{props.proyecto}</h2> 
             <h3 className='text-decoration-underline'>{props.description}</h3>
