@@ -2,26 +2,22 @@ import React from 'react';
 import { useState } from 'react';
 
 const ItemCount = ({ nombre, stock, initial, onAdd }) => {
-    const [quant, setQuant] = useState(initial);
+    const [quantity, setQuantity] = useState(initial);
     const [agregar, setAgregar] = useState(onAdd);
     const [total, setTotal] = useState(stock);
 
-    const sumarQuant = (valor) => {
-        if (valor <= total) {
-            setQuant(valor);
-        }
-    }
-    
-    const restarQuant = (valor) => {
-        if (valor > 0) {
-            setQuant(valor);
-        }
-    }
+    const sumarQuant = () => {
+        quantity < stock && setQuantity(quantity + 1);
+    };
+
+    const restarQuant = () => {
+        quantity > initial && setQuantity(quantity - 1);
+    };
 
     const masProductos = () => {
-        if (quant <= total) {
-            setTotal(total - quant);
-            setAgregar(agregar + quant);
+        if (quantity <= total) {
+            setTotal(total - quantity);
+            setAgregar(agregar + quantity);
         }
     }
 
@@ -29,11 +25,10 @@ const ItemCount = ({ nombre, stock, initial, onAdd }) => {
         <div className='container'>
             <div className='row'>
                 <div className='col-md-12'>
-                    <h3 className='pb-2 text center'>{nombre}</h3>
                     <div className="btn-group col-md-3 pb-2 h-50" role="group" aria-label="Basic outlined example">
-                        <input type="button" className="btn btn-dark" value="-" onClick={() => { restarQuant(quant - 1) }}/>
-                        <input type="text" className="form-control text-center" value={quant} aria-label="Input group example" aria-describedby="btnGroupAddon" readOnly />
-                        <input type='button' className="btn btn-dark" value="+" onClick={() => { sumarQuant(quant + 1) }}/>
+                        <input type="button" className="btn btn-dark" value="-" onClick={restarQuant}/>
+                        <input type="text" className="form-control text-center" value={quantity} aria-label="Input group example" aria-describedby="btnGroupAddon" readOnly />
+                        <input type='button' className="btn btn-dark" value="+" onClick={sumarQuant}/>
                         <button type="button" className="btn btn-secondary m-1 " onClick={() => { masProductos() }}>AÑADIR</button>
                     </div>
                 </div>

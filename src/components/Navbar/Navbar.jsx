@@ -19,7 +19,7 @@ const Navbar = () => {
                             <a className="nav-link" href="index.html">Nosotros</a>
                         </li>
                         <li className="nav-item">
-                            <a class="nav-link" href="index.html"><CartWidget /></a>
+                            <a className="nav-link" href="index.html"><CartWidget /></a>
                         </li>
                     </ul>
                 </div>

@@ -1,9 +1,18 @@
-.imagen{
+.imagen {
     width: 20%;
     height: 20%;
     align-self: center;
+    border: 1px solid black;
 };
 
-.card{
-    width: 50%;
-}
+.tarjeta {
+    box-shadow: 3px 3px 15px 1px rgb(158, 158, 158);
+    margin: 20px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+};
+
+.tarjetaCard{
+    display: flex;
+    justify-content: center;
+};
