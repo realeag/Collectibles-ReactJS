@@ -1,9 +1,9 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemListContainer/ItemCount";
 
 const ItemDetail = ({ figuritas }) => {
     return (
-        < div >
+        < div className="detalle" >
             <img src={figuritas.imagen} alt="cromos figuritas futbol" />
             <div >
                 <h3>{figuritas.nombre}</h3>

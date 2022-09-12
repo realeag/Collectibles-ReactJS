@@ -2,7 +2,7 @@ import './App.css';
 import './components/Cuerpo/styleCuerpo.css';
 import './components/Footer/styleFooter.css';
 import './components/Navbar/styleNavbar.css';
-import './components/ItemListContainer/Item.css';
+import './components/ItemListContainer/styleItem.css';
 import Navbar from './components/Navbar/Navbar';
 import Cuerpo from './components/Cuerpo/Cuerpo';
 import Footer from './components/Footer/Footer';

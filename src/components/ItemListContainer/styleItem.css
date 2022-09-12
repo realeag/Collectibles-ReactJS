@@ -14,5 +14,9 @@
 
 .tarjetaCard{
     display: flex;
-    justify-content: center;
+    
+};
+.detalle{
+    display: flex;
+    align-content: center;
 };

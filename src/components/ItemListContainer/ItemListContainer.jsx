@@ -12,17 +12,19 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         const getData = () =>
             new Promise((res, rej) => {
-                setTimeout(() => { res(productos); }, 1000);
+                setTimeout(() => { 
+                    res(productos); 
+                }, 1000);
             });
 
         getData()
-            .then((datos) => {
-                setDatos(datos);
+            .then((informacion) => {
+                setDatos(informacion);
             })
             .catch((error) => {
                 console.log(error);
-            })
-    }, [])
+            });
+    }, []);
 
     return (
         <div className='text-center font-monospace m-3 itemlistcontainer'>
