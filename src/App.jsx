@@ -7,21 +7,31 @@ import Navbar from './components/Navbar/Navbar';
 import Cuerpo from './components/Cuerpo/Cuerpo';
 import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemListContainer/ItemDetailContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <div className='container-fluid colorFondo'>
-      <Navbar />
-      <hr />
-      <main>
-        <ItemListContainer proyecto="Collectibles SRL" description="¿Nostalgia? Te traemos todos los coleccionables de tu" />
-        <ItemDetailContainer />
-        <Cuerpo />
-      </main>
-      <Footer derechos='Todos los derechos reservados. 2022.' copyright='Collectibles™' />
+
+    <div className='container-fluid colorFondo' >
+      <BrowserRouter >
+        <Navbar />
+        <hr />
+        <Cuerpo proyecto="Collectibles SRL" description="¿Nostalgia? Te traemos todos los coleccionables de tu infancia"/>
+
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/categoria/:categoriaMundial' element={<ItemListContainer />} />
+          <Route path='/item/:detalleID' element={<ItemDetailContainer />} />
+
+        </Routes>
+
+        <Footer derechos='2022. Todos los derechos reservados.' copyright='Collectibles™' />
+
+      </BrowserRouter >
     </div>
+
 
   );
 }

@@ -1,17 +1,13 @@
 import React from 'react';
-import camiseta from '../../assets/imgs/argentina86.jpg';
-import camiseta2 from '../../assets/imgs/argentinaSup86.jpg';
-
-const Newsletter = () => <p>Suscribite a nuestro Newsletter</p>
 
 
-const Cuerpo = () => {
+
+
+const Cuerpo = (props) => {
     return (
     <div className='cuerpo row justify-content-center'>
-        <h1 className='text-center pb-3'>SARASA</h1>
-        <img className='camiseta' src={camiseta} alt='camiseta argentina'></img>
-        <img className='camiseta' src={camiseta2} alt='camiseta argentina'></img>
-        <Newsletter />
+        <h1 className='text-center pb-3'>{props.proyecto}</h1>
+        <h2>{props.descripcion}</h2>
     </div>
     )
 }

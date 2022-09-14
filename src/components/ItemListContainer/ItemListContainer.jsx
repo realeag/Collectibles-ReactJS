@@ -4,18 +4,26 @@ import ItemList from './ItemList';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { productos } from '../productos/productos';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = (props) => {
 
     const [datos, setDatos] = useState([]);
 
+    const { categoriaMundial } = useParams();
+
     useEffect(() => {
         const getData = () =>
-            new Promise((res, rej) => {
-                setTimeout(() => { 
-                    res(productos); 
-                }, 1000);
-            });
+        new Promise((res, rej) => {
+            setTimeout(() => {
+                res(productos);
+            }, 1000);
+        });
+        if (categoriaMundial) {
+            getData().then(res => setDatos(res.filter(productos => productos.categoria === categoriaMundial)));
+        } else {
+            getData().then(res => setDatos(res));
+        }
 
         getData()
             .then((informacion) => {
@@ -24,7 +32,7 @@ const ItemListContainer = (props) => {
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
+    }, [categoriaMundial]);
 
     return (
         <div className='text-center font-monospace m-3 itemlistcontainer'>
@@ -38,5 +46,3 @@ const ItemListContainer = (props) => {
     )
 }
 
-
-export default ItemListContainer;
