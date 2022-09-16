@@ -25,13 +25,7 @@ const ItemListContainer = (props) => {
             getData().then(res => setDatos(res));
         }
 
-        getData()
-            .then((informacion) => {
-                setDatos(informacion);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+       
     }, [categoriaMundial]);
 
     return (

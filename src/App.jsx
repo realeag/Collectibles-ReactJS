@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter >
         <Navbar />
         <hr />
-        <Cuerpo proyecto="Collectibles SRL" description="¿Nostalgia? Te traemos todos los coleccionables de tu infancia"/>
+        <Cuerpo proyecto="Collectibles SRL" description="¿Nostalgia? Te traemos todos los coleccionables de tu infancia" />
 
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
