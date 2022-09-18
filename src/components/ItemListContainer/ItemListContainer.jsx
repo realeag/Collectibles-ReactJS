@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -32,9 +31,6 @@ const ItemListContainer = (props) => {
         <div className='text-center font-monospace m-3 itemlistcontainer'>
             <h2 className='text-decoration-underline'>{props.proyecto}</h2>
             <h3 className='text-decoration-underline'>{props.description}</h3>
-            <div className='align-center m-5 '>
-                <ItemCount stock={10} initial={1} onAdd={0} />
-            </div>
             <ItemList datos={datos} />
         </div>
     )
