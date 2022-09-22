@@ -8,32 +8,27 @@ const ItemDetailContainer = () => {
 
     const [datos, setDatos] = useState({});
 
-    const {detalleID}= useParams();
+    const { id } = useParams();
 
     useEffect(() => {
         const getProducto = () =>
             new Promise((res, rej) => {
-                const unidad = productos.find((figuritas) =>
-                    figuritas.id === 2);
                 setTimeout(() => {
-                    res(unidad);
-                }, 2000);
+                    res(productos);
+                }, 1000);
             });
-        
-            getProducto().then(res => setDatos(res.find(productos => productos.id === parseInt(detalleID))));
 
-        getProducto()
-            .then((informacion) => {
-                setDatos(informacion);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, [detalleID]);
+        if (id) {
+            getProducto().then(res => setDatos(res.find(productos => productos.id === Number(id))));
+        } else {
+            getProducto().then(res => setDatos(res));
+        }
+
+    }, [id]);
 
     return (
         <div>
-            <ItemDetail figuritas={datos} />
+            <ItemDetail datos={datos} />
         </div>
     )
 }

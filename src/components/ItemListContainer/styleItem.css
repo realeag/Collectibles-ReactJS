@@ -16,7 +16,9 @@
     display: flex;
     
 };
-.detalle{
-    display: flex;
-    align-content: center;
+
+.itemButton{
+    color: purple;
+    width: 2rem;
+    
 };

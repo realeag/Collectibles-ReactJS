@@ -15,19 +15,19 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/categoria">Tienda</NavLink>
-                            <ul className='m-3'>
-                                <li className="nav-item">
+                            <ul className='d-flex '>
+                                <ol className="nav-item">
                                     <NavLink className="nav-link" to="/categoria/Mundial1986">Mundial 1986</NavLink>
-                                </li>
-                                <li className="nav-item">
+                                </ol>
+                                <ol className="nav-item">
                                     <NavLink className="nav-link" to="/categoria/Mundial1990">Mundial 1990</NavLink>
-                                </li>
-                                <li className="nav-item">
+                                </ol>
+                                <ol className="nav-item">
                                     <NavLink className="nav-link" to="/categoria/Mundial1998">Mundial 1998</NavLink>
-                                </li>
-                                <li className="nav-item">
+                                </ol>
+                                <ol className="nav-item">
                                     <NavLink className="nav-link" to="/categoria/Mundial2014">Mundial 2014</NavLink>
-                                </li>
+                                </ol>
                             </ul>
                         </li>
                         <li className="nav-item">

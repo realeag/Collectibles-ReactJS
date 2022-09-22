@@ -1,26 +1,32 @@
-import React, {useState} from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ItemCount from "../ItemListContainer/ItemCount";
+import { CartContext } from '../../context/CartContext';
+import ItemCount from "../ItemCount/ItemCount";
+import '../ItemDetailContainer/styleDetail.css';
 
-const ItemDetail = ({ figuritas }) => {
+const ItemDetail = ({ datos }) => {
 
-    const [addToCart, setAddToCart] = useState(false);
+    const [agregado, setAgregado] = useState(0);
+    const { sumaCart } = useContext(CartContext);
 
-    const onAdd = (quantityToAdd) => {
-        setAddToCart(true);
+    const onAdd = (agregado) => {
+        setAgregado(agregado);
+        sumaCart(datos, agregado);
     }
 
     return (
         < div className="detalle" >
-            <img src={figuritas.imagen} alt="cromos figuritas futbol" />
+            <img src={datos.imagen} alt="cromos datos futbol" />
             <div >
-                <h3>{figuritas.nombre}</h3>
-                <p>{figuritas.descripcion}</p>
-                <h4>$ {figuritas.precio} -</h4>
-                { addToCart
-                    ? <Link to='/cart'>Ir a Pagar</Link>
-                    : <ItemCount stock={figuritas.stock} initial={1} onAdd={onAdd} />
-                    }
+                <h3>{datos.nombre}</h3>
+                <p>{datos.descripcion}</p>
+                <h4>$ {datos.precio} -</h4>
+                {agregado === 0
+                    ?
+                    (<ItemCount stock={datos.stock} initial={1} onAdd={onAdd} />)
+                    :
+                    (<Link to='/cart'>Ir a Pagar</Link>)
+                }
             </div>
         </div>
     )
