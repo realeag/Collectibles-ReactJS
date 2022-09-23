@@ -28,7 +28,7 @@ const ItemListContainer = (props) => {
     }, [categoriaMundial]);
 
     return (
-        <div className='text-center font-monospace m-3 itemlistcontainer'>
+        <div className='font-monospace m-3 itemListCont row'>
             <h2 className='text-decoration-underline'>{props.proyecto}</h2>
             <h3 className='text-decoration-underline'>{props.description}</h3>
             <ItemList datos={datos} />

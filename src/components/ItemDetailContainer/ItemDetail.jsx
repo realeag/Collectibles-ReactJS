@@ -7,12 +7,12 @@ import '../ItemDetailContainer/styleDetail.css';
 const ItemDetail = ({ datos }) => {
 
     const [agregado, setAgregado] = useState(0);
-    const { sumaCart } = useContext(CartContext);
+    const { sumarCarrito } = useContext(CartContext);
 
     const onAdd = (agregado) => {
         setAgregado(agregado);
-        sumaCart(datos, agregado);
-    }
+        sumarCarrito(datos, agregado);
+    };
 
     return (
         < div className="detalle" >
@@ -29,7 +29,7 @@ const ItemDetail = ({ datos }) => {
                 }
             </div>
         </div>
-    )
+    );
 }
 
 export default ItemDetail;

@@ -10,8 +10,8 @@ const Item = ({ figuritas }) => {
             <div >
                 <h5>{figuritas.nombre}</h5>
                 <p>$ {figuritas.precio} -</p>
-                <button className="itemButton">
-                    <Link to={`/detalle/${figuritas.id}`}>VER</Link>
+                <button >
+                    <Link className="itemButton" to={`/detalle/${figuritas.id}`}>VER</Link>
                 </button>
             </div>
         </div>

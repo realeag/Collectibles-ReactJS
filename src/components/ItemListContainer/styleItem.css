@@ -3,22 +3,30 @@
     height: 20%;
     align-self: center;
     border: 1px solid black;
-};
-
+}
 .tarjeta {
-    box-shadow: 3px 3px 15px 1px rgb(158, 158, 158);
-    margin: 20px 30px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-};
-
-.tarjetaCard{
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    height: auto;
+    width: auto;
+    transition: all .2s ease .1s;
     display: flex;
+    flex-direction: row;
     
-};
+}
+.tarjetaCard {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    padding: 16px 40px;
+    grid-gap: 40px;
 
-.itemButton{
-    color: purple;
-    width: 2rem;
+}
+.itemButton {
+    color: linear-gradient(103.4deg, #7535E5 2.77%, #8484FF 84.58%);
+    letter-spacing: 1px;
+    font-weight: 900;
+    appearance: none;
+    width: 100%;
+}
+.itemListCont{
     
-};
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
-export const CartContext = createContext([]);
+export const CartContext = createContext();
 
 const CartProvider = (props) => {
 
@@ -21,7 +21,7 @@ const CartProvider = (props) => {
     };
 
     const InCart = (id) => {
-        carrito.some((producto) => producto.id === id);
+        return carrito.some((producto) => producto.id === id);
     };
 
     const plusQuantity = (figuritas) => {
@@ -36,6 +36,15 @@ const CartProvider = (props) => {
             setCarrito(actualizaCarrito);
         };
 
+    const units = () => {
+        const traerCarrito = [...carrito];
+        let contador = 0;
+        traerCarrito.forEach((figuritas) => {
+            contador += figuritas.cantidad;
+        });
+        return contador;
+    }
+
     const removeAll = () => {
         setCarrito([]);
     };
@@ -48,7 +57,7 @@ const CartProvider = (props) => {
     
 
     return (
-        <CartContext.Provider value={[carrito, sumarCarrito, removeAll, removeOne]}>
+        <CartContext.Provider value={{carrito, sumarCarrito, removeAll, removeOne, units}}>
             {props.children}
         </CartContext.Provider>
     );
