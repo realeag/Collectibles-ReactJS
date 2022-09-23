@@ -13,10 +13,10 @@ const Cart = () => {
                 <div key={cromo.id}>
                     <h4>{cromo.nombre}</h4>
                     <h4>{cromo.imagen}</h4>
-                    <i className="fa-solid fa-trash-xmark" onClick={() => removeOne(cromo.id)}></i>
+                    <button onClick={() => removeOne(cromo.id)}>Borrar</button>
                 </div>
             ))}
-            <input type='button' value='Remove All' onClick={removeAll} />
+            <button onClick={removeAll}>Vaciar Carrito</button>
         </div>
     );
 };
