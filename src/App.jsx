@@ -1,4 +1,5 @@
 import './App.css';
+import './components/Cart/styleCart.css';
 import './components/Cuerpo/styleCuerpo.css';
 import './components/Footer/styleFooter.css';
 import './components/Navbar/styleNavbar.css';

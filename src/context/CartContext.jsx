@@ -43,6 +43,14 @@ const CartProvider = (props) => {
             contador += figuritas.cantidad;
         });
         return contador;
+    };
+
+    const precioFinal = () => {
+        return carrito.reduce((elemento, agregado) => elemento + agregado.cantidad * agregado.precio, 0);
+    };
+
+    const precioUnitario = () => {
+        return carrito.reduce((sumando, prodNuevo) => sumando + prodNuevo.cantidad, 0);
     }
 
     const removeAll = () => {
@@ -57,7 +65,7 @@ const CartProvider = (props) => {
     
 
     return (
-        <CartContext.Provider value={{carrito, sumarCarrito, removeAll, removeOne, units}}>
+        <CartContext.Provider value={{carrito, sumarCarrito, removeAll, removeOne, units, precioFinal, precioUnitario}}>
             {props.children}
         </CartContext.Provider>
     );
