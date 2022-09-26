@@ -9,7 +9,7 @@ const Cart = () => {
 
     if (carrito.length === 0) {
         return (
-            <div>
+            <div className="cartItem text-center m-5">
                 <h3>Tu carrito se encuentra vacío.</h3>
                 <Link to='/'>Hace click aquí para agregar productos.</Link>
             </div>
@@ -17,7 +17,7 @@ const Cart = () => {
     } else {
         return (
 
-            <div className="cart">
+            <div className="cartItem m-5 ">
                 <h3>Tu Carrito</h3>
                 {carrito.map((cromo) => (
                     <div className="cartCard" key={cromo.id}>
@@ -28,10 +28,10 @@ const Cart = () => {
                         <button className="cartButton1 mb-3" onClick={() => removeOne(cromo.id)}>Borrar</button>
                     </div>
                 ))}
-                <h5>Precio final: $ { precioFinal() } *</h5>
-                <p>*Incluye impuestos</p>
-                <button className="cartButton2 mb-3" onClick={removeAll}>Vaciar Carrito</button>
-                <h4>PAGAR</h4>
+                <h5 className="text-center">Precio final: $ { Math.round (precioFinal() * (1.21))}</h5>
+                <p className="text-center">*Incluye 21% de IVA</p>
+                <button className="text-center cartButton2 mb-2" onClick={removeAll}>Vaciar Carrito</button>
+                <h4 className="text-center">PAGAR</h4>
             </div>
         );
     }
