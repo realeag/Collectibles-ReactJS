@@ -1,7 +1,7 @@
 import React from 'react';
 import favicon from "../../assets/imgs/vector.png";
 import CartWidget from '../CartWidget/CartWidget';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -17,21 +17,21 @@ const Navbar = () => {
                             <NavLink className="nav-link" to="/categoria">Tienda</NavLink>
                             <ul className='d-flex '>
                                 <ol className="nav-item">
-                                    <NavLink className="nav-link" to="/categoria/Mundial1986">Mundial 1986</NavLink>
+                                    <Link className="nav-link" to="/categoria/Mundial1986">Mundial 1986</Link>
                                 </ol>
                                 <ol className="nav-item">
-                                    <NavLink className="nav-link" to="/categoria/Mundial1990">Mundial 1990</NavLink>
+                                    <Link className="nav-link" to="/categoria/Mundial1990">Mundial 1990</Link>
                                 </ol>
                                 <ol className="nav-item">
-                                    <NavLink className="nav-link" to="/categoria/Mundial1998">Mundial 1998</NavLink>
+                                    <Link className="nav-link" to="/categoria/Mundial1998">Mundial 1998</Link>
                                 </ol>
                                 <ol className="nav-item">
-                                    <NavLink className="nav-link" to="/categoria/Mundial2014">Mundial 2014</NavLink>
+                                    <Link className="nav-link" to="/categoria/Mundial2014">Mundial 2014</Link>
                                 </ol>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/item">Productos</NavLink>
+                            <NavLink className="nav-link" to="/">Productos</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/cart"><CartWidget/></NavLink>

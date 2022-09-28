@@ -17,21 +17,23 @@ const Cart = () => {
     } else {
         return (
 
-            <div className="cartItem m-5 ">
-                <h3>Tu Carrito</h3>
+            <div className="cartItem m-3">
+                <h3 className="cartTitle">Tu Carrito</h3>
                 {carrito.map((cromo) => (
-                    <div className="cartCard" key={cromo.id}>
-                        <h4 className="cartTitle">{cromo.nombre}</h4>
-                        <img className="cartImg" src={cromo.imagen} alt="compra carrito figurita" />
-                        <p>Cantidad: {cromo.cantidad}</p>
-                        <p>Subtotal: $ {cromo.precio * cromo.cantidad}</p>
+                    <div className="cartCard m-2" key={cromo.id}>
+                        <h4 className="cardTitle m-2">{cromo.nombre}</h4>
+                        <img className="cardImg m-2" src={cromo.imagen} alt="compra carrito figurita" />
+                        <p>Cantidad: <strong>{cromo.cantidad}</strong></p>
+                        <p>Subtotal: <strong> $ {cromo.precio * cromo.cantidad} .-</strong></p>
                         <button className="cartButton1 mb-3" onClick={() => removeOne(cromo.id)}>Borrar</button>
                     </div>
                 ))}
-                <h5 className="text-center">Precio final: $ { Math.round (precioFinal() * (1.21))}</h5>
-                <p className="text-center">*Incluye 21% de IVA</p>
-                <button className="text-center cartButton2 mb-2" onClick={removeAll}>Vaciar Carrito</button>
-                <h4 className="text-center">PAGAR</h4>
+                <div className="cartView">
+                    <h5 className="">Precio final: $ {Math.round(precioFinal() * (1.21))} .- *</h5>
+                    <p className="">*Incluye 21% de IVA.</p>
+                    <button className="cartButton2 m-2" onClick={removeAll}>Vaciar Carrito</button>
+                    <button className="cartButton3">Pagar</button>
+                </div>
             </div>
         );
     }

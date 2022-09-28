@@ -2,8 +2,9 @@ import React from 'react';
 import ItemList from './ItemList';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { productos } from '../productos/productos';
+import { db } from '../../firebaseConfig';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = (props) => {
 
@@ -12,19 +13,24 @@ const ItemListContainer = (props) => {
     const { categoriaMundial } = useParams();
 
     useEffect(() => {
-        const getData = () =>
-        new Promise((res, rej) => {
-            setTimeout(() => {
-                res(productos);
-            }, 1000);
-        });
-        if (categoriaMundial) {
-            getData().then(res => setDatos(res.filter(productos => productos.categoria === categoriaMundial)));
-        } else {
-            getData().then(res => setDatos(res));
-        }
+        const productosFB = collection(db, 'productos')
+        const filtrado = categoriaMundial ? query(productosFB, where('categoria', '==', categoriaMundial)) : productosFB ;
 
-       
+        getDocs(filtrado)
+        .then((res) => {
+            const productos = res.docs.map((figus) => {
+                return {
+                    id: figus.id,
+                    nombre: figus.data().nombre,
+                    descripcion: figus.data().descripcion,
+                    precio: figus.data().precio,
+                    categoria: figus.data().categoria,
+                    imagen: figus.data().imagen,
+                    stock: figus.data().stock,
+                }
+            });
+            setDatos(productos);
+        });       
     }, [categoriaMundial]);
 
     return (
@@ -33,8 +39,7 @@ const ItemListContainer = (props) => {
             <h3 className='text-decoration-underline'>{props.description}</h3>
             <ItemList datos={datos} />
         </div>
-    )
-}
-
+    );
+};
 
 export default ItemListContainer;

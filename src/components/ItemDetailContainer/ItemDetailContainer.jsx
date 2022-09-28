@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { productos } from '../productos/productos';
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from 'react-router-dom';
+import { db } from '../../firebaseConfig';
+import { getDoc, collection, doc } from 'firebase/firestore';
 
 
 const ItemDetailContainer = () => {
@@ -11,18 +12,17 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const getProducto = () =>
-            new Promise((res, rej) => {
-                setTimeout(() => {
-                    res(productos);
-                }, 1000);
-            });
+      
+        const productosFB = collection(db, 'productos');
+        const filtrado = doc(productosFB, id);
 
-        if (id) {
-            getProducto().then(res => setDatos(res.find(productos => productos.id === Number(id))));
-        } else {
-            getProducto().then(res => setDatos(res));
-        }
+        getDoc(filtrado)
+        .then((res) => {
+            setDatos({
+                id: res.id,
+                ...res.data()
+            });
+        });
 
     }, [id]);
 
