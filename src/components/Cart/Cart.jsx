@@ -32,7 +32,7 @@ const Cart = () => {
                     <h5 className="">Precio final: $ {Math.round(precioFinal() * (1.21))} .- *</h5>
                     <p className="">*Incluye 21% de IVA.</p>
                     <button className="cartButton2 m-2" onClick={removeAll}>Vaciar Carrito</button>
-                    <button className="cartButton3">Pagar</button>
+                    <Link to='/checkout' className="cartButton3">Pagar</Link>
                 </div>
             </div>
         );

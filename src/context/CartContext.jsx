@@ -36,13 +36,8 @@ const CartProvider = (props) => {
             setCarrito(actualizaCarrito);
         };
 
-    const units = () => {
-        const traerCarrito = [...carrito];
-        let contador = 0;
-        traerCarrito.forEach((figuritas) => {
-            contador += figuritas.cantidad;
-        });
-        return contador;
+    const totalItems = () => {
+        return carrito.reduce((newItem, oldItem) => newItem + oldItem.cantidad, 0);
     };
 
     const precioFinal = () => {
@@ -65,7 +60,7 @@ const CartProvider = (props) => {
     
 
     return (
-        <CartContext.Provider value={{carrito, sumarCarrito, removeAll, removeOne, units, precioFinal, precioUnitario}}>
+        <CartContext.Provider value={{carrito, sumarCarrito, removeAll, removeOne, totalItems, precioFinal, precioUnitario}}>
             {props.children}
         </CartContext.Provider>
     );

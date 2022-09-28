@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Cart/Checkout';
 import CartProvider from "./context/CartContext";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path='/' element={<ItemListContainer />} />
                 <Route path='/categoria/:categoriaMundial' element={<ItemListContainer />} />
                 <Route path='/cart' element={<Cart />} />
+                <Route path='/checkout' element={<Checkout />} />
                 <Route path='/detalle/:id' element={<ItemDetailContainer />} />
             </Routes>
 
