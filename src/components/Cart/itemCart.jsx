@@ -2,10 +2,9 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-const itemCart = ({ cromo }) => {
+const ItemCart = ({ cromo }) => {
 
-    const { removeOne } = useContext(CartContext);
-
+    const { removeOne } =  useContext(CartContext);
     return (
         <div className="cartCard m-2">
             <h4 className="cardTitle m-2">{cromo.nombre}</h4>
@@ -17,4 +16,4 @@ const itemCart = ({ cromo }) => {
     )
 };
 
-export default itemCart;
+export default ItemCart;

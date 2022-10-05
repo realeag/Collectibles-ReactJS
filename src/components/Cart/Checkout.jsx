@@ -1,4 +1,6 @@
 import { React, useState } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import Form from "./Form";
 
 const Checkout = () => {
@@ -8,12 +10,17 @@ const Checkout = () => {
         setOrden(identificador);
     }
 
+    const MySwal = withReactContent(Swal)
+
+    
     if (orden) {
         return (
-            <div>
-                <h2>Tu compra se completó con éxito. Tu número de orden es: {''} {orden}. </h2>
-                <h3>Gracias por comprar con nosotros.</h3>
-            </div>
+            MySwal.fire({
+                icon: 'success',
+                title: 'Tu compra fue completada.',
+                text: `Tu número de orden es: ${ orden }`,
+                footer: '<a href="index.html">Continuar comprando.</a>'
+            })
         );
     } else {
         <h2>Revisá los datos ingresados nuevamente.</h2>

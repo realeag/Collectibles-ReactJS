@@ -1,9 +1,26 @@
 .logo{
     width: 25%;
     height: 25%;
+    margin: 0.5rem;
+    text-decoration: none;
+  }
+  .logoFont{
+    font-size: 40px;
+    color: grey;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5rem;
+  }
+  .navbar-brand{
+    text-decoration: none;
+    color: grey;
+  }
+  .logoFont:hover{
+    font-style: none;
   }
   .navbar{
     width: 100%;
+    text-decoration: none
   }
   .nav-link{
     font-size: 22px;
