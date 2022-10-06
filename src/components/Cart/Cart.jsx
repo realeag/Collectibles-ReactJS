@@ -26,7 +26,7 @@ const Cart = () => {
                     <h3 className="">Precio final: $ {Math.round(precioFinal() * (1.21))} .- *</h3>
                     <p className="">*Incluye 21% de IVA.</p>
                     <button className="cartButton2 m-2" onClick={removeAll}>Vaciar Carrito</button>
-                    <Link to="/checkout" className="cartButton3">Continuar</Link>
+                    <Link to="/checkout" className="cartButton3 text-decoration-none">Continuar</Link>
                 </div>
             </div>
         );

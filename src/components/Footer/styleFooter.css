@@ -1,3 +1,31 @@
-.footer{
-    padding: 0.3rem;
-  }
+.footer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  width: auto;
+  height:auto;
+  box-sizing: border-box;
+  background-color: #004346;
+  color: #74B3CE;
+  line-height: 1.5;
+  align-self: flex-end;
+}
+
+.footerPagos {
+  height: 71px;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.footerPagos img {
+  height: auto;
+  width: auto;
+  margin: 0.5rem;
+}
+
+.footerCopyright {
+  align-items: center;
+  margin: 0.5;
+}

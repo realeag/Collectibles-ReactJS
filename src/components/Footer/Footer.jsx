@@ -1,15 +1,23 @@
 import React from "react";
-
-const Newsletter = () => <p>Suscribite a nuestro Newsletter</p>
+import Visa from '../../assets/imgs/visa.png';
+import Mercadopago from '../../assets/imgs/mercadopago.png';
+import Mastercard from '../../assets/imgs/mastercard.png';
 
 const Footer = (props) => {
     return (
         <div className="footer">
-            <Newsletter />
             <hr />
-            <p>{props.copyright} {props.derechos}</p>
+            <div className="d-flex footerPagos">
+                <p className="m-2">MEDIOS DE PAGO</p>
+                <img className="m-1" src={Mercadopago} alt="Mercadopago"></img>
+                <img className="m-1" src={Visa} alt="Visa"></img>
+                <img className="m-1" src={Mastercard} alt="Mastercard"></img>
+            </div>
+            <div className="footerCopyright">
+                <p>{props.copyright} {props.derechos}</p>
+            </div>
         </div>
-        
+
     )
 }
 

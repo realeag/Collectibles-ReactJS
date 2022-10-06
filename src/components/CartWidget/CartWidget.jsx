@@ -12,7 +12,7 @@ const CartWidget = () => {
 
     return (
         <div>
-            <span className="fa-solid fa-cart-shopping"></span>
+            <span className="fa-solid fa-cart-shopping text-decoration-none"></span>
             {''} { renderCount() }
         </div>
     )
