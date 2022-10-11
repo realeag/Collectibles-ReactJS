@@ -1,29 +1,35 @@
 .imagen {
-    width: 20%;
-    height: 20%;
+    height: 450px;
+    width: 350px;
     align-self: center;
     border: 1px solid black;
+    border-radius: 10px;
 }
 .tarjeta {
-    border: 1px solid #BDBDBD;
-    border-radius: 4px;
     height: auto;
     width: auto;
     transition: all .2s ease .1s;
     display: flex;
-    flex-direction: row;
-    
+    flex-wrap: nowrap;
+    display: block;
 }
 .tarjetaCard {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    padding: 16px 40px;
-    grid-gap: 40px;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .itemButton {
-    color: linear-gradient(103.4deg, #7535E5 2.77%, #8484FF 84.58%);
-    letter-spacing: 1px;
-    font-weight: 900;
-    appearance: none;
-    width: 100%;
+    width: fit-content;
+    align-self: center;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: #004346;
+    font-size: 15px;
+}
+.enlaceCart{
+    color: white;
+    text-decoration: none;
 }

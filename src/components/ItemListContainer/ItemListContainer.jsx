@@ -1,4 +1,5 @@
 import React from 'react';
+import './styleItem.css';
 import ItemList from './ItemList';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -34,7 +35,7 @@ const ItemListContainer = (props) => {
     }, [categoriaMundial]);
 
     return (
-        <div className='font-monospace m-3 itemListCont row'>
+        <div className='font-monospace m-3 itemListCont'>
             <h2 className='text-decoration-underline'>{props.proyecto}</h2>
             <h3 className='text-decoration-underline'>{props.description}</h3>
             <ItemList datos={datos} />

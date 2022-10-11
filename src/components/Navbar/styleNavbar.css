@@ -43,3 +43,9 @@
 .active {
   text-decoration: none;
 }
+
+.cantCart{
+  color: #f0f0f0;
+  border-radius: 30px;
+  font-style: bolder;
+}

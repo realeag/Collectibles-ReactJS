@@ -34,7 +34,8 @@ const Form = ({inId}) => {
     const inEmail = (e) => setEmail(e.target.value);
 
     return (
-        <form className="d-flex row" action='' onSubmit={inSubmit}>
+        <form className="form text-center m-2" action='' onSubmit={inSubmit}>
+            <p className="m-2">Completá con tus datos para continuar con la compra.</p>
             <input className="m-2"
                 type='text'
                 name='nombre'

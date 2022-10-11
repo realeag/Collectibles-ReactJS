@@ -16,16 +16,16 @@ const ItemDetail = ({ datos }) => {
 
     return (
         < div className="detalle" >
-            <img src={datos.imagen} alt="cromos datos futbol" />
+            <img className='imgDetail' src={datos.imagen} alt="cromos datos futbol" />
             <div >
-                <h3>{datos.nombre}</h3>
-                <p>{datos.descripcion}</p>
-                <h4>$ {datos.precio} -</h4>
+                <h3 className='m-2'>{datos.nombre}</h3>
+                <p className='m-2'>{datos.descripcion}</p>
+                <h4 className='m-3'>$ {datos.precio} -</h4>
                 {agregado === 0
                     ?
                     (<ItemCount stock={datos.stock} initial={1} onAdd={onAdd} />)
                     :
-                    (<Link to='/cart' className='text-decoration-none'>Ir a Pagar</Link>)
+                    (<Link to='/cart' className='goPayment'>Ir a Pagar</Link>)
                 }
             </div>
         </div>

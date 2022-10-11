@@ -1,9 +1,85 @@
-.cartImg{
-   width: 10%;
-   height: 10%;
-};
-.cartItem{
+.cardImg {
+   width: 50%;
+   height: 90%;
+}
+.cardTitle{
+   font-size: 18px;
+}
+
+.cartItem {
    margin-left: 2rem;
-   max-width: 900px;
-   flex-wrap:wrap-reverse;
-};
+   max-width: auto;
+   display: flex;
+   flex-direction: column;
+}
+.cartTitle {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 40px;
+   text-decoration: underline;
+   color: #004346;
+}
+.cartCard{
+   display: flex;
+   flex-direction: column;
+}
+.cartView{
+   border-radius: 10px;
+   text-align: center;
+   padding: 1.5rem;
+   margin: 1.5rem;
+   background-color: #f0f0f0;
+}
+.imgMapping{
+   background-color: #f0f0f0;
+   width: fit-content;
+   height: auto;
+   margin: 1rem;
+   display: flex;
+}
+.addCart{
+   text-decoration: underline;
+   font-size: 24px;
+   font-weight: bold;
+}
+.cartButton2{
+   width: fit-content;
+   align-self: center;
+   padding: 0.5rem 1rem;
+   color: white;
+   border-radius: 10px;
+   border: none;
+   background-color: #004346;
+}
+
+.form{
+   display: flex;
+   flex-direction: column;
+   max-width: fit-content;
+   justify-items: center;
+   padding: 1rem;
+}
+form p{
+   font-weight: bold;
+   font-size: 20px;
+   margin: 1rem;
+   align-self: center;
+
+}
+form input{
+   height: 35px;
+   border: none;
+   border-radius: 10px;
+   margin-bottom: 1rem;
+   padding: 0.5rem 1rem;
+   width: 100%;
+   background-color: #f0f0f0;
+}
+form button{
+   width: fit-content;
+   align-self: center;
+   padding: 0.5rem 1rem;
+   color: white;
+   border-radius: 10px;
+   border: none;
+   background-color: #004346;
+}
