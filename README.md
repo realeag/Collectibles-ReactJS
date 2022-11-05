@@ -45,5 +45,5 @@ Instalación de Sweet Alert
 
 ## Ejecución
 
-[Netlify](https://www.netlify.com/)
+[Netlify](https://6365b9a83b5a9d00a90915fd--jocular-mermaid-24fb48.netlify.app/)
 
