@@ -14,7 +14,7 @@ const Checkout = () => {
             <div className="checkout">
                 <h2 className="check1">Tu compra fue confirmada. Gracias por elegir Collectibles!</h2>
                 <h3 className="check2" >Tu número de orden es:</h3><h2 className="check4">{orden}</h2>
-                <Link to="/index.html" className="check3">Continuar comprando.</Link>
+                <Link to="/" className="check3">Continuar comprando.</Link>
             </div>
         );
     } else {
