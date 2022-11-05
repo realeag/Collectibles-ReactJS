@@ -83,3 +83,32 @@ form button{
    border: none;
    background-color: #004346;
 }
+
+.checkout{
+   text-align: center;
+   margin: 8rem;
+   border: solid black 5px;
+   border-radius: 5px;
+   box-shadow: grey 4px 4px;
+   padding: 1rem;
+}
+
+.check1{
+   margin: 2rem;
+   font-size: 32px;
+}
+.check2{
+   margin: 2.5rem;
+   font-size: 35px;
+   font-style: oblique;
+}
+.check3{
+   margin: 3rem;
+   font-size: 25px;
+   font-style: oblique;
+}
+.check4{
+   margin: 2.5rem;
+   color: rgb(4, 155, 41);
+   font-style: oblique;
+}
